@@ -1,12 +1,12 @@
 import psycopg2
 
 def get_db_connection():
-
     conn = psycopg2.connect(
-            host="localhost",
-            database="dictionary",
-            user="postgre",
-            password="musikklass96")
+        host="localhost",
+        port="5432",
+        database="dictionary",
+        user="postgre",
+        password="musikklass96")
     return conn
 
 
