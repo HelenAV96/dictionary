@@ -1,12 +1,12 @@
 import psycopg2
 
 def get_db_connection():
-
     conn = psycopg2.connect(
-            host="localhost",
-            database="dictionary",
-            user="postgre",
-            password="musikklass96")
+        host="localhost",
+        port="5432",
+        database="dictionary",
+        user="postgre",
+        password="musikklass96")
     return conn
 
 
@@ -42,14 +42,16 @@ def save_dict():
     cur.close()
     conn.close()
     
-
+def insert_word(word, translation):
+    print()
+    
 while True: ## REPL - Read Execute Program Loop
     cmd = input("Command: ")
     if cmd == "list":
         print(read_dict())
     elif cmd == "add":
-        name = input("  Word: ")
-        phone = input("  Translation: ")
+        word = input("  Word: ")
+        translation = input("  Translation: ")
         add_word(word, translation)
     elif cmd == "delete":
         ID = input("  ID: ")
