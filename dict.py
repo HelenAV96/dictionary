@@ -48,8 +48,8 @@ while True: ## REPL - Read Execute Program Loop
     if cmd == "list":
         print(read_dict())
     elif cmd == "add":
-        name = input("  Word: ")
-        phone = input("  Translation: ")
+        word = input("  Word: ")
+        translation = input("  Translation: ")
         add_word(word, translation)
     elif cmd == "delete":
         ID = input("  ID: ")
