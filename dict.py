@@ -42,9 +42,7 @@ def save_dict():
     cur.close()
     conn.close()
     
-def insert_word(word, translation):
-    print()
-    
+
 while True: ## REPL - Read Execute Program Loop
     cmd = input("Command: ")
     if cmd == "list":
